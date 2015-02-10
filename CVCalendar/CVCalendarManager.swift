@@ -28,7 +28,7 @@ class CVCalendarManager: NSObject {
     var starterWeekday: Int?
     
     private override init() {
-        self.calendar = NSCalendar(identifier: NSCalendarIdentifierGregorian)
+        self.calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
         self.currentDate = NSDate()
         self.components = self.calendar?.components(NSCalendarUnit.MonthCalendarUnit | NSCalendarUnit.DayCalendarUnit, fromDate: self.currentDate!)
         
@@ -116,7 +116,7 @@ class CVCalendarManager: NSObject {
         let firstMonthDateOut: NSDate? = {
             let firstMonthDateInWeekday = self.weekdayForDate(firstMonthDateIn)
             if firstMonthDateInWeekday == self.starterWeekday {
-                println("here")
+                //println("here")
                 return firstMonthDateIn
             }
             

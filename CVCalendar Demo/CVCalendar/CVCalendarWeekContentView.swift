@@ -609,6 +609,8 @@ class CVCalendarWeekContentView: NSObject, CVCalendarContentDelegate {
         } else {
             if currentDateMonthStartDate != presentedDateMonthStartDate {
                 allowed =  true
+            } else if (currentDate != date) {
+                allowed = true
             }
         }
         
